@@ -11,12 +11,13 @@ type Contact = {
   created_at: string;
 };
 
-export default function AdminContacts() {
+export default async function AdminContacts() {
   // Fetch data directly from SQLite DB using Next.js Server Components
   let contacts: Contact[] = [];
   
   try {
-    contacts = db.prepare('SELECT * FROM contacts ORDER BY created_at DESC').all() as Contact[];
+    const res = await db.execute('SELECT * FROM contacts ORDER BY created_at DESC');
+    contacts = res.rows as unknown as Contact[];
   } catch (err) {
     console.error("DB Query failed:", err);
   }

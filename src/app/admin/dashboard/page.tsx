@@ -16,9 +16,12 @@ export default async function Dashboard() {
   let expenses = [];
   
   try {
-    bookings = db.prepare('SELECT * FROM bookings ORDER BY booking_date DESC, time_slot DESC').all();
-    contacts = db.prepare('SELECT * FROM contacts ORDER BY created_at DESC').all();
-    expenses = db.prepare('SELECT * FROM expenses ORDER BY created_at DESC').all();
+    const bookingsRes = await db.execute('SELECT * FROM bookings ORDER BY booking_date DESC, time_slot DESC');
+    const contactsRes = await db.execute('SELECT * FROM contacts ORDER BY created_at DESC');
+    const expensesRes = await db.execute('SELECT * FROM expenses ORDER BY created_at DESC');
+    bookings = bookingsRes.rows;
+    contacts = contactsRes.rows;
+    expenses = expensesRes.rows;
   } catch (err) {
     console.error("Dashboard DB Query failed:", err);
   }
