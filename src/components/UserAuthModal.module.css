@@ -1,0 +1,126 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalBox {
+  background: rgba(15, 15, 25, 0.95);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: #00f2fe;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  color: #a0a0b0;
+}
+
+.input {
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #00f2fe;
+}
+
+.submitBtn {
+  padding: 1rem;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+}
+
+.error {
+  color: #ff4b4b;
+  font-size: 0.9rem;
+  text-align: center;
+  background: rgba(255, 75, 75, 0.1);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.toggleText {
+  color: #a0a0b0;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.toggleLink {
+  color: #00f2fe;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.toggleLink:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,108 @@
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.loginBox {
+  background: rgba(10,10,15,0.8);
+  border: 1px solid var(--neon-cyan);
+  padding: 4rem 3rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 229, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 2;
+  animation: floatBox 6s ease-in-out infinite;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  color: var(--neon-pink);
+  margin-bottom: 3rem;
+  font-family: var(--font-orbitron);
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  color: var(--neon-cyan);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.input {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--glass-border);
+  padding: 1rem;
+  border-radius: 4px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+.loginBtn {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 2px solid var(--neon-cyan);
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s;
+}
+
+.loginBtn:hover {
+  background: var(--neon-cyan);
+  color: #000;
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+}
+
+.error {
+  color: #ff3333;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+@keyframes floatBox {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
