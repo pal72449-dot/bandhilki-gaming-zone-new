@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './Pricing.module.css';
 
 interface PricingProps {
@@ -11,21 +12,24 @@ export default function Pricing({ onBookNow }: PricingProps) {
       price1: "₹50 / Hour",
       price2: "₹30 / 30 Min",
       desc: "Per person. Challenge your friends!",
-      glow: "cyan"
+      glow: "cyan",
+      image: "/images/pricing/multiplayer.png"
     },
     {
       title: "Solo Player (PS5)",
       price1: "₹80 / Hour",
       price2: "₹50 / 30 Min",
       desc: "Immerse yourself completely.",
-      glow: "pink"
+      glow: "pink",
+      image: "/images/pricing/solo.png"
     },
     {
       title: "Happy Hours",
       price1: "₹30 / Hour (Multi)",
       price2: "₹50 / 30 Min (Solo)",
       desc: "Daily 6 PM - 9 PM. Don't miss out!",
-      glow: "purple"
+      glow: "purple",
+      image: "/images/pricing/happy.png"
     }
   ];
 
@@ -37,6 +41,9 @@ export default function Pricing({ onBookNow }: PricingProps) {
         <div className={styles.grid}>
           {plans.map((plan, index) => (
             <div key={index} className={`${styles.card} ${styles['glow-' + plan.glow]}`}>
+              <div className={styles.cardImageWrapper}>
+                <Image src={plan.image} alt={plan.title} width={300} height={180} className={styles.cardImage} />
+              </div>
               <h3 className={styles.cardTitle}>{plan.title}</h3>
               <div className={styles.priceBox}>
                 <div className={styles.price}>{plan.price1}</div>
