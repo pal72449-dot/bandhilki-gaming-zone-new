@@ -65,6 +65,9 @@ export default function Pricing({ onBookNow }: PricingProps) {
             className={`${styles.zoneCard} ${styles.theaterCard}`}
             onClick={() => onBookNow('Private Theater')}
           >
+            <div className={styles.cardImageWrapper}>
+              <Image src="/images/pricing/theater.png" alt="Private Movie Theatre" width={400} height={180} className={styles.cardImage} />
+            </div>
             <h3 className="text-gradient-pink">Private Movie Theatre</h3>
             <p className={styles.zonePrice}>₹100 / hour</p>
             <p className={styles.zoneDesc}>For any number of people. Watch in style!</p>
@@ -74,6 +77,9 @@ export default function Pricing({ onBookNow }: PricingProps) {
             className={`${styles.zoneCard} ${styles.partyCard}`}
             onClick={() => onBookNow('Birthday Party Zone')}
           >
+            <div className={styles.cardImageWrapper}>
+              <Image src="/images/pricing/party.png" alt="Birthday Party Zone" width={400} height={180} className={styles.cardImage} />
+            </div>
             <h3 className="text-gradient-cyan">Birthday Party Zone</h3>
             <p className={styles.zonePrice}>₹400 / hour</p>
             <p className={styles.zoneDesc}>Full zone rental for the ultimate celebration.</p>
@@ -83,6 +89,9 @@ export default function Pricing({ onBookNow }: PricingProps) {
             className={`${styles.zoneCard} ${styles.rentalCard}`}
             onClick={() => onBookNow('PS5 Home Rental')}
           >
+            <div className={styles.cardImageWrapper}>
+              <Image src="/images/pricing/rental.png" alt="PS5 Home Rental" width={400} height={180} className={styles.cardImage} />
+            </div>
             <h3 className="text-gradient-purple">PS5 Home Rental</h3>
             <p className={styles.zonePrice}>₹800 / Day</p>
             <p className={styles.zoneDesc}>Take the premium gaming experience home! Includes 2 controllers + Top Games.</p>
